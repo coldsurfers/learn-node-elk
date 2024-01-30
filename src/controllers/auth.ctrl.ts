@@ -1,7 +1,7 @@
 /* eslint-disable no-unreachable */
 import { Context } from 'koa'
 import { Service } from 'typedi'
-import { LogService } from '../services/LogService'
+import { LogService } from '../services/logService'
 
 @Service()
 export class AuthController {

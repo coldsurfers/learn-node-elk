@@ -1,5 +1,6 @@
 import { RequestParams } from '@elastic/elasticsearch'
 
+import { Service } from 'typedi'
 import { ElasticSearch } from './elasticSearch'
 
 const INDEX_NAME = 'server_api_logs'
@@ -12,6 +13,7 @@ export type ElasticSearchAPILogType = {
   errorMessage?: string
 }
 
+@Service()
 export class ElasticSearchAPILog extends ElasticSearch<ElasticSearchAPILogType> {
   constructor() {
     super(INDEX_NAME)

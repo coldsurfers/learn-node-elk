@@ -4,7 +4,7 @@ import kcors from 'koa-cors'
 import Router from 'koa-router'
 import Container from 'typedi'
 import { Routes } from './controllers'
-import { LogService } from './services/LogService'
+import { LogService } from './services/logService'
 
 class Server {
   private app: Koa
@@ -16,7 +16,7 @@ class Server {
     this.router = new Router()
 
     this.setMiddlewares()
-    // this.setRoutes();
+    this.setRoutes()
   }
 
   private setMiddlewares() {

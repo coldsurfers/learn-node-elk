@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'reflect-metadata'
 
-import { Context } from 'koa'
+// import { Context } from 'koa'
 import Router from 'koa-router'
 import { Service } from 'typedi'
 import { PostController } from './post.ctrl'
@@ -26,10 +26,10 @@ export class Routes {
     this.router.get('/posts/:id', this.postController.getPost)
     this.router.post('/auth/signup', this.authController.signup)
 
-    this.router.all('*', (ctx: Context) => {
-      ctx.status = 404
-      ctx.body = '존재하지 않는 API 입니다'
-    })
+    // this.router.all('*', (ctx: Context) => {
+    //   ctx.status = 404
+    //   ctx.body = '존재하지 않는 API 입니다'
+    // })
   }
 
   public getRoutes() {
