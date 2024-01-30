@@ -3,6 +3,7 @@ import BodyParser from 'koa-bodyparser'
 import kcors from 'koa-cors'
 import Router from 'koa-router'
 import Container from 'typedi'
+import { Routes } from './controllers'
 
 class Server {
   private app: Koa
@@ -23,7 +24,7 @@ class Server {
   }
 
   private setRoutes() {
-    // this.router.use('/api', Container.get(Routes).getRoutes())
+    this.router.use('/api', Container.get(Routes).getRoutes())
 
     // this.app.use((ctx: Context, next: Koa.Next) => {
     //   const logService = Container.get(LogService)
