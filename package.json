@@ -27,6 +27,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@elastic/elasticsearch": "^7.5.0",
     "koa": "^2.15.0",
     "koa-bodyparser": "^4.4.1",
     "koa-cors": "^0.0.16",

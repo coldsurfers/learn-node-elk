@@ -1,12 +1,16 @@
 /* eslint-disable no-unreachable */
 import { Context } from 'koa'
 import { Service } from 'typedi'
+import { LogService } from '../services/LogService'
 
 @Service()
 export class AuthController {
+  // eslint-disable-next-line no-useless-constructor, no-unused-vars, no-empty-function
   constructor(private logService: LogService) {}
 
   public signup = async (ctx: Context) => {
+    // @ts-ignore
+    // eslint-disable-next-line no-unused-vars
     const { userId, password, userName } = ctx.request.body
 
     try {
